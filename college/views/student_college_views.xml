@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<odoo>
+     <record id="student_college_views_tree" model="ir.ui.view">
+        <field name="name">student.college.tree</field>
+        <field name="model">student.college</field>
+        <field name="arch" type="xml">
+            <tree string="channel">
+
+    <field name="admission_no"/>
+    <field name="admission_date"/>
+    <field name="first_name"/>
+    <field name="second_name"/>
+    <field name="communication_address"/>
+    <field name="phone"/>
+    <field name="email"/>
+            </tree>
+        </field>
+     </record>
+
+     <record id="student_college_views_form" model="ir.ui.view">
+        <field name="name">student.college.form</field>
+        <field name="model">student.college</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <sheet>
+                    <div>
+                        <h1>
+                             <field name="first_name" placeholder="e.g. archana" class="oe_inline"/><field name="second_name" placeholder="e.g. v" class="oe_inline"/>
+
+                        </h1>
+                           </div>
+                    <group>
+                        <group>
+                            <field name="admission_no"/>
+                             <field name="admission_date"/>
+                             <field name="father"/>
+                              <field name="mother"/>
+                             </group>
+                             <group>
+                                 <field name="communication_address"/>
+                                 <field name="permanent_address" attrs="{'invisible':[('used', '==', True)]}"/>
+                                 <field name="used"/>
+                                 <field name="phone"/>
+                                 <field name="email"/>
+                             </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+     </record>
+
+    <record id="student_college_action" model="ir.actions.act_window">
+         <field name="name">Students</field>
+        <field name="res_model">student.college</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

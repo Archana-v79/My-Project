@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="exam_college_action" model="ir.actions.act_window">
+        <field name="name">Exam Details</field>
+        <field name="res_model">exam.college</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

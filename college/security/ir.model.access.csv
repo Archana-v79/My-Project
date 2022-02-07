@@ -1,0 +1,15 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_student_college,access_student_college,model_student_college,base.group_user,1,1,1,1
+access_admission_college,access_admission_college,model_admission_college,base.group_user,1,1,1,1
+access_conf_college,access_conf_college,model_conf_college,base.group_user,1,1,1,1
+access_semester_college,access_semester_college,model_semester_college,base.group_user,1,1,1,1
+access_syllabus,access_syllabus,model_syllabus,base.group_user,1,1,1,1
+access_class_college,access_class_college,model_class_college,base.group_user,1,1,1,1
+access_exam_college,access_exam_college,model_exam_college,base.group_user,1,1,1,1
+access_academic_year,access_academic_year,model_academic_year,base.group_user,1,1,1,1
+
+
+
+
+
+

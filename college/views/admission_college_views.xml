@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="admission_college_views_tree" model="ir.ui.view">
+        <field name="name">admission.college.tree</field>
+        <field name="model">admission.college</field>
+        <field name="arch" type="xml">
+            <tree string="channel">
+                <field name="admission_no"/>
+                <field name="admission_date"/>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="communication_address"/>
+                <field name="phone"/>
+                <field name="Course"/>
+                <field name="application_date"/>
+                <field name="academic_year"/>
+                <field name="previous_educational_qualification"/>
+                <field name="educational_institute"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="admission_college_views_form" model="ir.ui.view">
+        <field name="name">admission.college.form</field>
+        <field name="model">admission.college</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <header>
+                     <button id="button_confirm" name="action_confirm" string="Confirm" class="oe_highlight" type="object"/>
+
+                     <button name="button_rejected" string="Reject" class="oe_highlight" type="object" attrs="{'invisible':[('state', '!=', 'application')]}"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,application,approved,reject,done"/>
+                </header>
+
+
+                <sheet>
+                    <div>
+                        <h1>
+                            <field name="first_name" placeholder="e.g. archana" class="oe_inline"/><field name="last_name" placeholder="e.g. v" class="oe_inline"/>
+
+                        </h1>
+                           </div>
+                    <group>
+                        <group>
+
+                            <field name="admission_no"/>
+
+
+                            <field name="admission_date"/>
+
+
+
+                            <field name="father"/>
+
+                            <field name="mother"/>
+                             <field name="application_date"/>
+
+                            <field name="academic_year"/>
+
+                            <field name="previous_educational_qualification"/>
+
+                            <field name="educational_institute"/>
+
+                            <field name="transfer_certificate"/>
+                        </group>
+                        <group>
+                            <field name="communication_address"/>
+
+                            <field name="permanent_address" attrs="{'invisible':[('used', '==', True)]}"/>
+
+                            <field name="used"/>
+
+                            <field name="phone"/>
+
+                            <field name="email"/>
+
+                            <field name="Course"/>
+
+
+
+
+                            <field name="company_id" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+    <record id="admission_college_action" model="ir.actions.act_window">
+        <field name="name">Admission</field>
+        <field name="res_model">admission.college</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

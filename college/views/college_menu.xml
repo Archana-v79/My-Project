@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<odoo>
+    <menuitem id="student_menu_root" name="College">
+        <menuitem id="student_first_level_menu" name="Student">
+            <menuitem id="student_menu_action" action="student_college_action"/>
+        </menuitem>
+
+        <menuitem id="admission_menu_root" name="Admission">
+            <menuitem id="admission_menu_action" action="admission_college_action"/>
+        </menuitem>
+
+        <menuitem id="class_menu_root" name="Class" sequence = "9">
+            <menuitem id="class_menu_action" action="class_college_action"/>
+            <menuitem id="class_menu_action" action="class_college_action"/>
+        </menuitem>
+
+        <menuitem id="exam_menu_root" name="Exam" sequence = "9">
+            <menuitem id="exam_menu_action" action="exam_college_action"/>
+            <menuitem id="exam_menu_action" action="exam_college_action"/>
+        </menuitem>
+
+        <menuitem id="conf_menu_root" name="Configuration">
+            <menuitem id="conf_menu_action" action="conf_college_action"/>
+            <menuitem id="conf1_menu_action" action="semester_college_action"/>
+        </menuitem>
+
+
+
+
+    </menuitem>
+</odoo>

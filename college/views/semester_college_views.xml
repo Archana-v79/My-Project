@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="semester_college_views_tree" model="ir.ui.view">
+        <field name="name">semester.college.tree</field>
+        <field name="model">semester.college</field>
+        <field name="arch" type="xml">
+            <tree string="channel">
+                <field name="semester_name"/>
+                <field name="Number_Semesters"/>
+                <field name="Course"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="semester_college_views_form" model="ir.ui.view">
+        <field name="name">semester.college.form</field>
+        <field name="model">semester.college</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="semester_name"/>
+                        </group>
+                        <group>
+                            <field name="Number_Semesters"/>
+                        </group>
+                        <group>
+                            <field name="Course"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="syllabus">
+                            <field name="syllabus">
+                                <tree string="syllabus">
+
+                            <field name="subject"/>
+                            <field name="max_mark"/>
+                                    </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="semester_college_action" model="ir.actions.act_window">
+        <field name="name">Semesters</field>
+        <field name="res_model">semester.college</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

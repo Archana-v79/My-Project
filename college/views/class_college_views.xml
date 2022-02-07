@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="class_college_views_tree" model="ir.ui.view">
+        <field name="name">class.college.tree</field>
+        <field name="model">class.college</field>
+        <field name="arch" type="xml">
+            <tree string="channel">
+<!--                <field name="name"/>-->
+                <field name="Course"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="class_college_views_form" model="ir.ui.view">
+        <field name="name">class.college.form</field>
+        <field name="model">class.college</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+
+                <sheet>
+                    <group>
+<!--                        <group>-->
+<!--                            <field name="name"/>-->
+<!--                        </group>-->
+                        <group>
+                            <field name="semester_name"/>
+                        </group>
+                        <group>
+                            <field name="academic_year"/>
+                        </group>
+                        <group>
+                            <field name="Course"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+
+    <record id="class_college_action" model="ir.actions.act_window">
+        <field name="name">Class Details</field>
+        <field name="res_model">class.college</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
